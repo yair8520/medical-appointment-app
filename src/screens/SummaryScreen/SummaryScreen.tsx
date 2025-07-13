@@ -11,6 +11,7 @@ import { Appointment } from '@/types/store/appointment';
 export const SummaryScreen = ({ route, navigation }: SummaryScreenProps) => {
   const { specialty, date, time, patientName, existingAppointmentId } = route.params;
   const dispatch = useDispatch();
+  //@comment- the id is generated based on the date, time, patient name and specialty
   const handleConfirmAppointment = () => {
     const appointment: Appointment = {
       id: existingAppointmentId || `appt_${date}_${time}_${patientName}_${specialty}`,
@@ -26,6 +27,7 @@ export const SummaryScreen = ({ route, navigation }: SummaryScreenProps) => {
   };
 
   const handleCancelAppointment = () => {
+    //@comment- reset the navigation to the booking screen
     navigation.reset({
       index: 0,
       routes: [{ name: ROUTES.BOOKING }],

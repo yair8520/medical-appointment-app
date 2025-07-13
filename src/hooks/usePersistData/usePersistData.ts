@@ -7,6 +7,9 @@ import { login } from '@/store/slices/authSlice';
 import { setAppointments } from '@/store/slices/appointmentSlice';
 import { Alert } from 'react-native';
 
+//@comment- this hook is used to persist the data to the storage
+//it is used to save the data to the storage when the app is closed and the user is logged in
+
 export const usePersistData = () => {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();

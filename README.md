@@ -11,6 +11,7 @@ A React Native application for managing medical appointments.
 - Manage existing appointments (view, edit, cancel)
 - Data persistence with AsyncStorage
 - **One appointment per day per specialty** — enforced automatically
+- **Search for @comment to see importent parts**
 
 ## Tech Stack
 
