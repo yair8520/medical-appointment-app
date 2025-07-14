@@ -38,7 +38,6 @@ const appointmentSlice = createSlice({
         (appt) =>
           appt.specialty === newAppt.specialty &&
           appt.slot.date === newAppt.slot.date &&
-          appt.slot.time === newAppt.slot.time &&
           appt.patientName === newAppt.patientName,
       );
 
